@@ -1,6 +1,3 @@
-debugger;
-
-
 let mensajeAries = "♈ARIES: Con Júpiter en tu signo estarás en condiciones para triunfar y conseguir todo lo que siempre has deseado. La prosperidad te espera y se producirán grandes cambios en tu profesión. Esto te llevará a moverte más allá de tus espacios usuales.";
 
 let mensajeTauro = "♉TAURO: Es hora ya de recoger los frutos que has sembrado en etapas anteriores. Triunfarás en tu profesión, pero no sólo por tu talento y tu capacidad, sino también por tu simpatía y encanto social, que te abrirán muchas puertas. 2023 será un año positivo para tu vida amorosa y te centrarás en ella.";
