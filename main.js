@@ -1,15 +1,4 @@
-let aries = "aries";
-let tauro = "tauro";
-let geminis = "geminis";
-let cancer = "cancer";
-let leo = "leo";
-let virgo = "virgo";
-let libra = "libra";
-let escorpio = "escorpio"
-let sagitario = "sagitario"
-let capricornio = "capricornio";
-let acuario = "acuario";
-let piscis = "piscis";
+debugger;
 
 
 let mensajeAries = "♈ARIES: Con Júpiter en tu signo estarás en condiciones para triunfar y conseguir todo lo que siempre has deseado. La prosperidad te espera y se producirán grandes cambios en tu profesión. Esto te llevará a moverte más allá de tus espacios usuales.";
@@ -37,70 +26,86 @@ let mensajeAcuario = "♒ACUARIO: Los astros te proporcionarán prosperidad y po
 let mensajePiscis = "♓PISCIS: Llegan nuevas responsabilidades que podrían causarte un bajón de energía. Te conviene descansar y relajarte para no sufrir traspiés que irían en tu contra. Levanta el ánimo y no te dejes vencer por el pesimismo. Tus facultades mentales están en un punto muy alto."
 
 
+const signosArray = ["aries", "tauro", "geminis", "cancer", "leo", "virgo", "libra", "escorpio", "sagitario", "capricornio", "acuario", "piscis"];
+
+
 function preguntar() {
     signoIngresado = prompt("Ingrese su signo zodiacal en minúsculas y sin acentos para obtener predicciones del año 2023");
     alert("El signo zodical ingresado es " + signoIngresado);
-    if (signoIngresado == "") {alert("No puede dejar este campo vacío. Intente nuevamente") }
+    if (signoIngresado == "") {
+        alert("No puede dejar este campo vacío. Intente nuevamente")
+    }
+}
 
+function signoEvaluacion() {
+    if (signosArray.indexOf(signoIngresado) != -1) {
+    switchSignos();
+    } else {
+        alert("El signo zodiacal ingresado no es válido. Intente nevamente")
+    }
+    while (signosArray.indexOf(signoIngresado) == -1) {
+        preguntar();
+        switchSignos();
+    }
 }
 
 function switchSignos() {
     switch (signoIngresado) {
-        case aries:
+        case "aries":
             alert(mensajeAries);
 
             break;
 
-        case tauro:
+        case "tauro":
             alert(mensajeTauro)
 
             break;
 
-        case geminis:
+        case "geminis":
             alert(mensajeGeminis)
 
             break;
 
-        case cancer:
+        case "cancer":
             alert(mensajeCancer)
 
             break;
 
-        case leo:
+        case "leo":
             alert(mensajeLeo)
 
             break;
 
-        case virgo:
+        case "virgo":
             alert(mensajeVirgo)
 
             break;
 
-        case libra:
+        case "libra":
             alert(mensajeLibra)
 
             break;
 
-        case escorpio:
+        case "escorpio":
             alert(mensajeEscorpio)
 
             break;
 
-        case sagitario:
+        case "sagitario":
             alert(mensajeSagitario)
 
             break;
-        case capricornio:
+        case "capricornio":
             alert(mensajeCapricornio)
 
             break;
 
-        case acuario:
+        case "acuario":
             alert(mensajeAcuario)
 
             break;
 
-        case piscis:
+        case "piscis":
             alert(mensajePiscis)
 
             break;
@@ -111,40 +116,4 @@ function switchSignos() {
 }
 
 preguntar();
-
-if (
-    (signoIngresado == aries) ||
-    (signoIngresado == tauro) ||
-    (signoIngresado == geminis) ||
-    (signoIngresado == cancer) ||
-    (signoIngresado == leo) ||
-    (signoIngresado == virgo) ||
-    (signoIngresado == libra) ||
-    (signoIngresado == escorpio) ||
-    (signoIngresado == sagitario) ||
-    (signoIngresado == capricornio) ||
-    (signoIngresado == acuario) ||
-    (signoIngresado == piscis) ||
-    (signoIngresado == "")
-) {
-    switchSignos();
-} else {
-    alert("ingrese un signo zodiacal válido");
-}
-while (
-    (signoIngresado != aries) ||
-    (signoIngresado != tauro) ||
-    (signoIngresado != geminis) ||
-    (signoIngresado != cancer) ||
-    (signoIngresado != leo) ||
-    (signoIngresado != virgo) ||
-    (signoIngresado != libra) ||
-    (signoIngresado != escorpio) ||
-    (signoIngresado != sagitario) ||
-    (signoIngresado != capricornio) ||
-    (signoIngresado != acuario) ||
-    (signoIngresado != piscis)
-) {
-    preguntar();
-    switchSignos();
-}
+signoEvaluacion();
