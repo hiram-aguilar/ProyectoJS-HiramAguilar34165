@@ -7,11 +7,39 @@ html {
     font-size: 62,5%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+body {
+    margin: 20px;
+}
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.principal {
+    display: flex;
+    flex-direction: row;
+}
 .btn-sign {
     width: 100px;
     height: 100px;
 }
 .signs-list {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+.rueda {
+    position: fixed;
+    animation: giroRueda 20s infinite linear;
+}
+
+@keyframes giroRueda {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
 }
 
